@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "joke-master",
+            "prefix": "jm",
             "style": "kebab-case"
           }
         ]

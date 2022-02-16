@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "joke-master": "apps/joke-master",
+    "joke-master-e2e": "apps/joke-master-e2e"
+  }
+}

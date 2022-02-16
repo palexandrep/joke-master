@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/joke-master",
+  "sourceRoot": "apps/joke-master/src",
+  "prefix": "joke-master",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/joke-master",
+        "index": "apps/joke-master/src/index.html",
+        "main": "apps/joke-master/src/main.ts",
+        "polyfills": "apps/joke-master/src/polyfills.ts",
+        "tsConfig": "apps/joke-master/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/joke-master/src/favicon.ico",
+          "apps/joke-master/src/assets"
+        ],
+        "styles": ["apps/joke-master/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/joke-master/src/environments/environment.ts",
+              "with": "apps/joke-master/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "joke-master:build:production"
+        },
+        "development": {
+          "browserTarget": "joke-master:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "joke-master:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/joke-master/src/**/*.ts",
+          "apps/joke-master/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/joke-master"],
+      "options": {
+        "jestConfig": "apps/joke-master/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

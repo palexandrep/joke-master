@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "joke-master": "apps/joke-master",
+    "joke-master-application": "libs/joke-master-application",
     "joke-master-e2e": "apps/joke-master-e2e"
   }
 }

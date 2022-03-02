@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@joke-master-data": ["libs/joke-master-data/src/index.ts"],
       "@joke-master-lib": ["libs/joke-master-application/src/index.ts"]
     }
   },

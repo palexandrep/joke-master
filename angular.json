@@ -3,6 +3,7 @@
   "projects": {
     "joke-master": "apps/joke-master",
     "joke-master-application": "libs/joke-master-application",
+    "joke-master-data": "libs/joke-master-data",
     "joke-master-e2e": "apps/joke-master-e2e"
   }
 }

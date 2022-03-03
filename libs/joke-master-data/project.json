@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/joke-master-data",
+  "sourceRoot": "libs/joke-master-data/src",
+  "prefix": "joke-master",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/joke-master-data"],
+      "options": {
+        "jestConfig": "libs/joke-master-data/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/joke-master-data/src/**/*.ts",
+          "libs/joke-master-data/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

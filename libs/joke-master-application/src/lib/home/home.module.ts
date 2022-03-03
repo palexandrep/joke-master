@@ -13,7 +13,7 @@ export const HOME_ROUTE: Route = {
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class HomeModule { }

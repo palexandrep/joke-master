@@ -20,11 +20,9 @@ import { JokeMasterDataModule } from '@joke-master-data';
         HOME_ROUTE
       ]
     }]),
-
   ],
   declarations: [
     ContainerComponent
   ],
-
 })
 export class JokeMasterApplicationModule {}
